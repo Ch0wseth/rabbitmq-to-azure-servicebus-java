@@ -5,6 +5,12 @@ description: "Prerequis, correspondances, criteres de bascule et limites avant p
 
 ## Ce que le client peut reutiliser
 
+Pour executer la migration avec des instructions et des prompts etape par etape,
+commencez par le [parcours B : votre application](migration-step-by-step.md).
+Le present guide sert de reference pour les decisions techniques.
+Pour essayer uniquement les sept messages de demonstration, suivez
+le [parcours A : laboratoire](lab-step-by-step.md).
+
 Clonez le depot et executez le README avec votre tenant et votre abonnement.
 L'IaC est parametree ; aucun acces a l'environnement de l'auteur n'est requis.
 Commencez dans un groupe dedie de laboratoire, jamais sur une file de production.

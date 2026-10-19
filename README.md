@@ -34,6 +34,20 @@ flowchart LR
 
 ## Demarrage client
 
+**Choisissez un seul parcours pour commencer :**
+
+| Votre objectif | Instructions a suivre |
+|----------------|----------------------|
+| Comprendre et reproduire la demo dans votre abonnement | [Parcours A : laboratoire pas a pas](docs/lab-step-by-step.md) |
+| Migrer votre propre application Java/Spring avec Copilot CLI ou VS Code | [Parcours B : migration guidee de votre application](docs/migration-step-by-step.md) |
+
+Le parcours B fournit l'installation du skill, les prompts a copier dans Copilot,
+les livrables attendus et les points de validation jusqu'au transfert et au rollback.
+Il n'exige ni GitHub App ni agent cloud. Le client garde les decisions metier,
+les revues de code et les autorisations d'actions sur ses environnements.
+Une application ou une topologie non prise en charge reste bloquee explicitement :
+le skill n'est pas un convertisseur universel.
+
 Utilisez **vos propres** identifiants de tenant et d'abonnement.
 Aucun abonnement, identifiant de personne ou secret de l'auteur n'est necessaire.
 Les commandes suivantes sont prevues pour PowerShell 7 sur Windows.
