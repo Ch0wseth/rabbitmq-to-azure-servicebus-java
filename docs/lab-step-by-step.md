@@ -67,8 +67,8 @@ Attendez la propagation RBAC avant le premier envoi.
 
 ## 4. Executer et lire le resultat
 
-N'utilisez pas une file partagee. Ne lancez pas un second consommateur ni les
-commandes manuelles du guide presentateur en parallele.
+N'utilisez pas une file partagee. Ne lancez pas un second consommateur ni une autre
+execution du scenario en parallele.
 
 ```powershell
 .\scripts\demo.ps1
@@ -98,9 +98,6 @@ inspectez les messages du run concerne avec le [README](../README.md#limites-imp
 | 401/403 Azure | Verifier compte/abonnement cible et roles approuves ; attendre leur propagation |
 | Connexion AMQP impossible | Faire verifier les WebSockets sortants sur TCP 443 et le proxy |
 | Profondeur RabbitMQ initiale non nulle | Identifier le run incomplet ; ne pas effacer ses messages pour faire passer le test |
-
-Pour une presentation avec les commandes une par une, suivez le
-[guide presentateur](presenter-guide.md) a la place du script automatique.
 
 ## 5. Nettoyer avec une approbation distincte
 

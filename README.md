@@ -11,7 +11,7 @@ confirmation d'envoi Service Bus. Une coupure volontaire rend visible la redeliv
 RabbitMQ et la deduplication Service Bus. Le producteur bascule ensuite vers le SDK Azure.
 
 Le scenario dure environ 15 a 20 minutes apres installation. Il contient du code Java 17,
-une infrastructure Bicep, des scripts PowerShell 7 et un guide presentateur.
+une infrastructure Bicep, des scripts PowerShell 7 et des guides pas a pas.
 Il ne deploie aucune application dans Azure : les processus Java tournent sur votre poste.
 
 > [!WARNING]
@@ -171,10 +171,8 @@ Le compte local de laboratoire est `guest` / `guest`.
 Les ports 5672 et 15672 sont limites a l'interface loopback.
 N'utilisez pas ces identifiants ni cette configuration pour un broker partage.
 
-## Presenter et adapter la demo
+## Adapter la demo
 
-Le [guide presentateur](docs/presenter-guide.md) contient les commandes manuelles,
-le minutage, les schemas et les reponses aux questions frequentes.
 Le [guide de migration client](docs/client-migration.md) explique ce que le client doit
 inventorier et adapter avant une migration reelle.
 
