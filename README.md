@@ -106,6 +106,8 @@ Par defaut, Bicep cree :
 L'authentification locale utilise `AzureCliCredential` et Microsoft Entra.
 Les cles SAS sont desactivees sur le namespace. TLS 1.2 minimum est configure.
 La connexion utilise AMQP sur WebSockets, TCP 443, pour limiter les problemes de proxy.
+Le SDK selectionne explicitement l'abonnement du deploiement et donc son compte Azure CLI,
+pour ne pas utiliser par erreur un autre compte deja connecte.
 Un proxy peut neanmoins filtrer les WebSockets.
 Le point d'acces Azure est public avec authentification Entra, pas un Private Endpoint.
 Adaptez le reseau avec votre equipe plateforme pour une utilisation hors laboratoire.
@@ -211,3 +213,10 @@ inspectez les files et terminez la consommation du run indique avant de recommen
 * [Transferts, locks et settlements](https://learn.microsoft.com/azure/service-bus-messaging/message-transfers-locks-settlement)
 * [Dead-letter queues](https://learn.microsoft.com/azure/service-bus-messaging/service-bus-dead-letter-queues)
 * [RabbitMQ acknowledgements et publisher confirms](https://www.rabbitmq.com/docs/confirms)
+
+## Licence
+
+Aucune licence n'est accordee pour le moment.
+La visibilite publique du depot n'accorde pas un droit general de reutilisation,
+de modification ou de redistribution. Obtenez l'autorisation du titulaire des droits
+avant d'integrer ce code a un projet client.

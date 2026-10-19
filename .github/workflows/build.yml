@@ -1,0 +1,28 @@
+name: Build Java and validate IaC
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+          cache: maven
+      - name: Build and unit test
+        run: mvn --batch-mode --no-transfer-progress verify
+      - name: Compile Bicep without deploying
+        run: az bicep build --file infra/main.bicep --outfile "$RUNNER_TEMP/main.json"
+      - name: Parse PowerShell scripts
+        shell: pwsh
+        run: |
+          Get-ChildItem scripts -Filter '*.ps1' | ForEach-Object {
+            $errors = $null
+            [System.Management.Automation.Language.Parser]::ParseFile($_.FullName, [ref]$null, [ref]$errors) | Out-Null
+            if ($errors) { throw ($errors -join "`n") }
+          }
